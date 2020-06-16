@@ -1,4 +1,6 @@
+// // // // 
 // js-04 //
+// // // // 
 
 // source
 // https://www.w3schools.com/js/tryit.asp?filename=tryjs_loc_href
@@ -14,14 +16,13 @@ if ( count_path > 15 ) {
   // console.log ("more than 15");
   var add_hpath = true;
   // source
-  // file:///home/hiki/Dropbox/js/h_test3/display_image/contents/js004.html
   // add_hpath = hweb_path.substr(15,count_path);
 } else {
   // console.log ("less or equal to 15!");
   var add_hpath = false;
 }
 
-console.log(add_hpath);
+// console.log(add_hpath);
 
 var demo4adr = document.getElementById("demo4").innerHTML;
 
@@ -82,3 +83,59 @@ src.appendChild(img); // assign the image element to the target element
 
 
 
+
+// // // // 
+// js-05 //
+// // // // 
+
+// try to create a random integer number
+function rndInt() {
+  let num = getRandomInt(10);
+  console.log("func said " + num);
+  return num;
+}
+
+// this is for testing this func
+// function runpersec2() {
+//   thisVar = setTimeout(rndInt(), 1000);
+// }
+
+var src2 = document.querySelector("#js3"); // find target element
+src2.innerHTML = ""; // remove strings
+
+var img2 = document.createElement("img"); // create element first
+var rnd10
+// console.log("rnd10 is " + rnd10);
+
+function getDogCatImg2(){
+  rnd10 = rndInt();
+  // console.log("rnd10 is " + rnd10);
+  img2.innerHTML = ""; // remove strings
+
+  if (rnd10 > 5) {
+    var randint4img2 = rnd10 - 5;
+    var dog_cat2 = "dog";
+    // console.log("images/" dog_cat + randint4dog + ".jpg");
+  } else {
+    var randint4img2 = rnd10;
+    var dog_cat2 = "cat";
+    // console.log("images/cat" + rnd10  + ".jpg");
+  }
+
+  img2.width = 300;
+  img2.alt = dog_cat2 + randint4img2;
+  img2.title = dog_cat2 + randint4img2;
+
+  if (add_hpath == true) {
+    img2.src = "../images/" + dog_cat2 + randint4img2 + ".jpg";
+  } else {
+    img2.src = "images/" + dog_cat2 + randint4img2 + ".jpg";
+  }
+
+  document.querySelector("#hidden_mssg2").innerHTML = " <strong>連続</strong>ボタンを押してみよう！ ";
+}
+
+function runpersec2() {
+  thisVar = setTimeout(getDogCatImg2(), 1000);
+  src2.appendChild(img2); // assign the image element to the target element
+}
