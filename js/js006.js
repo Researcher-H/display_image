@@ -72,7 +72,7 @@ function getDogImg(){
     img_dog.src = "images/" + "dog" + rnd5 + ".jpg";
   }
 
-  document.querySelector("#hidden_mssg3").innerHTML = " <strong>INUU</strong>ボタンを押してみよう！ ";
+  document.querySelector("#hidden_mssg3").innerHTML = " <strong>INUU</strong>ボタンを何度も押してみよう！ ";
 }
 
 // source
