@@ -96,7 +96,7 @@ function timeout() {
       }
 
       timeout();
-  }, 1500);
+  }, 1000);
 }
 
 // function runpersec_cat() {
